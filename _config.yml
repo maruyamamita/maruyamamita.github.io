@@ -107,4 +107,4 @@ deploy:
   type: git
   repo: git@github-shinsen:maruyamamita/maruyamamita.github.io.git
   branch: gh-pages
-  message: "deploy: {{ now('YYYY-MM-DD HH:mm:ss') }}"
+  message: 'deploy: {{ now("yyyy-MM-dd HH:mm:ss") }}'
