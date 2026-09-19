@@ -2,6 +2,21 @@
 
 把 Hexo 静态站自动部署到账号 `maruyamamita` 的用户主页 `https://maruyamamita.github.io/`。
 
+## 主题
+
+当前主题 = `themes/Sakura`，取自 [honjun/hexo-theme-sakura](https://github.com/honjun/hexo-theme-sakura)。
+
+**注意：上游仓库不是主题本身，是作者自己的整站**（根下有 `scaffolds/ source/ themes/ _config.yml`）。
+真正的主题在 `themes/Sakura/`，只有这一层被搬进了本目录。
+
+上游把作者的个人账号、收款码、评论后端凭据、歌单、视频全写死在配置和布局里，
+所以搬过来之后做了一轮「去作者化」，逐项记在 `themes/Sakura/README.shinsen.md`。
+其中最要紧的两条：`donate`（他的收款码）与 `valine` 的那对 LeanCloud key（他的应用），
+不是「不好看」的问题，是原样上线会把访问者的钱和评论送到别人那里去。
+
+搜索框依赖 `content.json`，由 `hexo-generator-json-content` 产出；不装这个生成器，
+搜索框点了没反应且**不报错**。
+
 ## 分支约定
 
 | 分支 | 内容 | 谁写 |

@@ -1,0 +1,85 @@
+# ============================================================================
+# Shinsen · Sakura 主题配置
+# 主题本体：honjun/hexo-theme-sakura（上游作者 Mashiro / Hojun，MIT）
+# 本文件已按 maruyamamita.github.io 改写。相对上游做过的删改，逐条记在
+# 同目录 README.shinsen.md 里：上游作者的个人账号、收款码、B 站/网易云外链、
+# 以及硬编码在上游配置里的 LeanCloud 评论 AppId/AppKey 全部移除。
+# ============================================================================
+
+# 站点标识：header 里 prefixName 与 siteName 拼成 logo
+prefixName: ''
+siteName: Shinsen
+favicon: /images/favicon.ico
+# 头像（页眉右上、移动端菜单、文章底部作者块都用它）。
+# 主题没有自带头像图，先拿自带的一张封面当占位，换成自己的图请改这里。
+avatar: /images/cover/(3).jpg.webp
+url: https://maruyamamita.github.io
+description: Shinsen 的站点
+# 置空 ⇒ 所有图片走本站本地资源，不再引用上游的 jsdelivr 图床
+cdn: ''
+pjax: 1
+mathjax: 0
+
+notice: 站点刚上线，主题还在调。
+
+# 懒加载占位图：主题本地没有这个 loader，仍走 jsdelivr
+lazyloadImg: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg
+
+# 导航：只留真实存在的页面，外链用绝对地址（url_for 原样放行）
+menus:
+  首页: { path: /, fa: fa-fort-awesome faa-shake }
+  归档: { path: /archives, fa: fa-archive faa-shake }
+  GitHub: { path: https://github.com/maruyamamita, fa: fa-github faa-tada }
+
+homePageSortType: -1
+homeArticleShown: 10
+
+# 首页随机背景图，用主题自带的封面（source/images/cover/），不走外链
+bg:
+  - /images/cover/(1).jpg.webp
+  - /images/cover/(2).jpg.webp
+  - /images/cover/(3).jpg.webp
+  - /images/cover/(4).jpg.webp
+  - /images/cover/(5).jpg.webp
+  - /images/cover/(6).jpg.webp
+  - /images/cover/(7).jpg.webp
+  - /images/cover/(8).jpg.webp
+bgclass: filter-dot
+
+# START:DASH 三张卡片：置空 = 不渲染（上游填的是作者自己的 B 站/万事屋）
+startdash: []
+siteBuildingTime: 09/19/2026
+
+# 社交按钮：置空 = 不渲染。上游这里全是 mashirozx 的微博/知乎/微信
+social: {}
+msocial: {}
+
+# 赞赏：置空 = 不渲染。上游的支付宝/微信收款码是作者本人的，绝不上线
+donate: {}
+
+# 背景视频：置空 = 不播放（上游指向他 CDN 上的 Unbroken.mp4）
+movies:
+  url: ''
+  name: ''
+
+# 网易云播放器：置空 = aplayer.ejs 整块不渲染（上游挂的是作者的歌单 2660651585）
+aplayer: {}
+
+# Valine 评论：关闭。上游配置里那对 v_appId/v_appKey 是主题作者的 LeanCloud
+# 应用凭据，不是我们的；要用评论得自己去 LeanCloud 建应用再填。
+valine: false
+v_appId: ''
+v_appKey: ''
+
+# Waline 评论：关闭
+waline:
+  enable: false
+  serverURL:
+  visitor: false
+  comment_count: true
+  avatar: mp
+  guest_info: nick
+  pageSize: 10
+  placeholder: 祝开开心心！
+  requiredFields: [ 'nick','mail' ]
+  background: ''

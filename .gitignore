@@ -3,3 +3,6 @@ public/
 .deploy_git/
 db.json
 *.log
+
+# 上游作者个人资产（收款码等）的本地归档，不进仓库
+_removed-upstream-assets/
